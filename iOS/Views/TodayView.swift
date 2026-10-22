@@ -97,8 +97,10 @@ struct TodayView: View {
                 }
             }
             if let reflection = reflections.first {
-                MarkdownText(text: reflection.content)
+                // Keyed on generation time so a regenerated reflection starts collapsed again.
+                ExpandableMarkdown(text: reflection.content)
                     .font(.callout)
+                    .id(reflection.generatedAt)
                 Text("Updated \(Format.time(reflection.generatedAt))")
                     .font(.caption2)
                     .foregroundStyle(.tertiary)

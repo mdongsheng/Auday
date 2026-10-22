@@ -306,3 +306,60 @@ struct MarkdownText: View {
         }
     }
 }
+
+/// Markdown text that collapses to a few lines with a fade when it is long, plus a "Show more" toggle.
+struct ExpandableMarkdown: View {
+    let text: String
+    var collapsedLines = 6
+
+    @State private var isExpanded = false
+    @State private var visibleHeight: CGFloat = 0
+    @State private var fullHeight: CGFloat = 0
+
+    private var isTruncated: Bool { fullHeight > visibleHeight + 1 }
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            MarkdownText(text: text)
+                .lineLimit(isExpanded ? nil : collapsedLines)
+                .onGeometryChange(for: CGFloat.self) { $0.size.height } action: { visibleHeight = $0 }
+                // Measure the untruncated height at the same width to know whether a toggle is needed.
+                .background(alignment: .top) {
+                    MarkdownText(text: text)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .hidden()
+                        .onGeometryChange(for: CGFloat.self) { $0.size.height } action: { fullHeight = $0 }
+                }
+                .mask {
+                    if !isExpanded && isTruncated {
+                        LinearGradient(
+                            stops: [.init(color: .black, location: 0.7), .init(color: .clear, location: 1)],
+                            startPoint: .top,
+                            endPoint: .bottom
+                        )
+                    } else {
+                        Rectangle()
+                    }
+                }
+                .contentShape(Rectangle())
+                .onTapGesture { if isTruncated || isExpanded { toggle() } }
+
+            if isTruncated || isExpanded {
+                Button(action: toggle) {
+                    HStack(spacing: 4) {
+                        Text(isExpanded ? LocalizedStringKey("Show less") : LocalizedStringKey("Show more"))
+                        Image(systemName: "chevron.down")
+                            .rotationEffect(.degrees(isExpanded ? 180 : 0))
+                    }
+                    .font(.footnote.weight(.semibold))
+                    .foregroundStyle(Theme.pink)
+                }
+                .buttonStyle(.plain)
+            }
+        }
+    }
+
+    private func toggle() {
+        withAnimation(.easeInOut(duration: 0.25)) { isExpanded.toggle() }
+    }
+}
