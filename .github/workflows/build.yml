@@ -1,0 +1,41 @@
+name: Build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install XcodeGen
+        run: brew install xcodegen
+
+      - name: Generate project
+        run: xcodegen generate
+
+      - name: Toolchain
+        run: xcodebuild -version && xcodebuild -showsdks
+
+      - name: Build Watch app + complications
+        run: |
+          set -o pipefail
+          xcodebuild build \
+            -project Auday.xcodeproj \
+            -scheme AudayWatch \
+            -destination 'generic/platform=watchOS Simulator' \
+            CODE_SIGNING_ALLOWED=NO | tee watch.log | grep -E "error:|warning: unre|BUILD" || true
+          grep -q "BUILD SUCCEEDED" watch.log
+
+      - name: Build iOS app (embeds Watch app)
+        run: |
+          set -o pipefail
+          xcodebuild build \
+            -project Auday.xcodeproj \
+            -scheme Auday \
+            -destination 'generic/platform=iOS Simulator' \
+            CODE_SIGNING_ALLOWED=NO | tee ios.log | grep -E "error:|BUILD" || true
+          grep -q "BUILD SUCCEEDED" ios.log

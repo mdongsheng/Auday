@@ -1,0 +1,1526 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "%lld min": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld 分钟"
+          }
+        }
+      }
+    },
+    "%lld recordings · %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld 条录音 · %@"
+          }
+        }
+      }
+    },
+    "%lld–%lld bpm": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld–%lld 次/分"
+          }
+        }
+      }
+    },
+    "A summary appears after transcription.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "转写完成后会生成摘要。"
+          }
+        }
+      }
+    },
+    "AI Model": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI 模型"
+          }
+        }
+      }
+    },
+    "API Key": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "API Key"
+          }
+        }
+      }
+    },
+    "Add an OpenAI-compatible endpoint and key to start chatting.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "添加一个 OpenAI 兼容接口和 Key 即可开始对话。"
+          }
+        }
+      }
+    },
+    "Allow microphone access in the Watch app settings.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请在手表设置中允许麦克风访问。"
+          }
+        }
+      }
+    },
+    "Answers come from your own recordings, with links to the moments they came from.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "答案来自你自己的录音，并附带对应时刻的链接。"
+          }
+        }
+      }
+    },
+    "Any service compatible with the OpenAI Chat Completions API works, including self-hosted Ollama, vLLM or LM Studio.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "任何兼容 OpenAI Chat Completions API 的服务都可以使用，包括自托管的 Ollama、vLLM 或 LM Studio。"
+          }
+        }
+      }
+    },
+    "Appearance": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "外观"
+          }
+        }
+      }
+    },
+    "Ask": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "提问"
+          }
+        }
+      }
+    },
+    "Ask Auday": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "问问 Auday"
+          }
+        }
+      }
+    },
+    "Ask about your day": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "问问你的一天"
+          }
+        }
+      }
+    },
+    "Ask about your recordings…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "询问你的录音内容…"
+          }
+        }
+      }
+    },
+    "Ask anything about your day": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "关于你的一天，尽管问"
+          }
+        }
+      }
+    },
+    "Auday turns your Apple Watch into an all-day AI memory. Record, transcribe and ask about anything you heard.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Auday 把你的 Apple Watch 变成全天候的 AI 记忆。录音、转写，并随时询问你听到过的一切。"
+          }
+        }
+      }
+    },
+    "Audio recordings, transcripts, health data, places and chat history are stored only on your iPhone. There is no Auday server or account.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "录音、转写、健康数据、地点和对话记录只保存在你的 iPhone 上。没有 Auday 服务器，也不需要账号。"
+          }
+        }
+      }
+    },
+    "Audio storage": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "音频占用"
+          }
+        }
+      }
+    },
+    "Automatic": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自动"
+          }
+        }
+      }
+    },
+    "Base URL": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Base URL"
+          }
+        }
+      }
+    },
+    "Bring your own model": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自带模型"
+          }
+        }
+      }
+    },
+    "Chunk": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "分段"
+          }
+        }
+      }
+    },
+    "Chunk length": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "分段时长"
+          }
+        }
+      }
+    },
+    "Clear": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清空"
+          }
+        }
+      }
+    },
+    "Clear the conversation?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清空对话？"
+          }
+        }
+      }
+    },
+    "Connect a model": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "连接模型"
+          }
+        }
+      }
+    },
+    "Connect an AI model in Settings to get summaries, daily reflections and chat.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在设置中连接 AI 模型，即可获得摘要、每日回顾和对话。"
+          }
+        }
+      }
+    },
+    "Connect an AI model in Settings to summarize recordings.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在设置中连接 AI 模型以总结录音。"
+          }
+        }
+      }
+    },
+    "Connect an AI model in the iPhone app first.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请先在 iPhone App 中连接 AI 模型。"
+          }
+        }
+      }
+    },
+    "Connect any OpenAI-compatible model with your own key.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "使用你自己的 Key 连接任意 OpenAI 兼容模型。"
+          }
+        }
+      }
+    },
+    "Context from your body": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "来自身体的上下文"
+          }
+        }
+      }
+    },
+    "Could not start recording.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法开始录音。"
+          }
+        }
+      }
+    },
+    "Daily Reflection": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "每日回顾"
+          }
+        }
+      }
+    },
+    "Dark": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "深色"
+          }
+        }
+      }
+    },
+    "Data": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "数据"
+          }
+        }
+      }
+    },
+    "Delete": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "删除"
+          }
+        }
+      }
+    },
+    "Delete all data": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "删除所有数据"
+          }
+        }
+      }
+    },
+    "Delete all recordings, transcripts and chats?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "删除所有录音、转写和对话？"
+          }
+        }
+      }
+    },
+    "Delete anytime": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "随时删除"
+          }
+        }
+      }
+    },
+    "Delete everything": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "全部删除"
+          }
+        }
+      }
+    },
+    "Delete single recordings, or everything from Settings → Data.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "可以删除单条录音，也可以在 设置 → 数据 中删除全部内容。"
+          }
+        }
+      }
+    },
+    "Delete this recording?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "删除这条录音？"
+          }
+        }
+      }
+    },
+    "Dictate a question. Your iPhone searches your recordings and answers here.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "口述一个问题，iPhone 会搜索你的录音并在这里回答。"
+          }
+        }
+      }
+    },
+    "Endpoint": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "接口"
+          }
+        }
+      }
+    },
+    "Failed": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "失败"
+          }
+        }
+      }
+    },
+    "Fetch model list": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "获取模型列表"
+          }
+        }
+      }
+    },
+    "Generate": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "生成"
+          }
+        }
+      }
+    },
+    "Generate a reflection of your day from your recordings, places and health data.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "根据录音、地点和健康数据生成今天的回顾。"
+          }
+        }
+      }
+    },
+    "Get Started": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "开始使用"
+          }
+        }
+      }
+    },
+    "Good afternoon": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "下午好"
+          }
+        }
+      }
+    },
+    "Good evening": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "晚上好"
+          }
+        }
+      }
+    },
+    "Good morning": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "早上好"
+          }
+        }
+      }
+    },
+    "Health": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "健康"
+          }
+        }
+      }
+    },
+    "Heart Rate": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "心率"
+          }
+        }
+      }
+    },
+    "Heart rate today": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "今日心率"
+          }
+        }
+      }
+    },
+    "Heart rate, stress, sleep and places enrich every memory.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "心率、压力、睡眠和地点让每段记忆更完整。"
+          }
+        }
+      }
+    },
+    "Highlights": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "高光时刻"
+          }
+        }
+      }
+    },
+    "Inspired by Auday. No servers, no accounts — your memories stay yours.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "灵感来自 Auday。没有服务器，没有账号——你的记忆只属于你。"
+          }
+        }
+      }
+    },
+    "Intelligence": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "智能"
+          }
+        }
+      }
+    },
+    "Language": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "语言"
+          }
+        }
+      }
+    },
+    "Light": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "浅色"
+          }
+        }
+      }
+    },
+    "Location": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "位置"
+          }
+        }
+      }
+    },
+    "Microphone": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "麦克风"
+          }
+        }
+      }
+    },
+    "Microphone access is off. Enable it in Settings.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "麦克风权限未开启，请在设置中开启。"
+          }
+        }
+      }
+    },
+    "Model": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "模型"
+          }
+        }
+      }
+    },
+    "No AI model is configured. Add one in Settings → AI Model.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "尚未配置 AI 模型，请在 设置 → AI 模型 中添加。"
+          }
+        }
+      }
+    },
+    "No matches": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "没有匹配结果"
+          }
+        }
+      }
+    },
+    "No recordings": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "暂无录音"
+          }
+        }
+      }
+    },
+    "No recordings yet.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "还没有录音。"
+          }
+        }
+      }
+    },
+    "No speech detected.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未检测到语音。"
+          }
+        }
+      }
+    },
+    "No summary": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无摘要"
+          }
+        }
+      }
+    },
+    "Not configured": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未配置"
+          }
+        }
+      }
+    },
+    "Nothing recorded yet today.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "今天还没有录音。"
+          }
+        }
+      }
+    },
+    "On-device only": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "仅限设备端"
+          }
+        }
+      }
+    },
+    "On-device recognition is not supported for %@. Disable “On-device only” in Settings to use Apple’s server.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 不支持设备端识别。请在设置中关闭“仅限设备端”以使用 Apple 服务器。"
+          }
+        }
+      }
+    },
+    "On-device transcription": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设备端转写"
+          }
+        }
+      }
+    },
+    "Only transcript text is sent to the model you configure. Audio never leaves your devices.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "只有转写文本会发送给你配置的模型，音频永远不会离开你的设备。"
+          }
+        }
+      }
+    },
+    "Open System Settings": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打开系统设置"
+          }
+        }
+      }
+    },
+    "Or start from your Apple Watch.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "或在 Apple Watch 上开始。"
+          }
+        }
+      }
+    },
+    "Parameters": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "参数"
+          }
+        }
+      }
+    },
+    "Permissions": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "权限"
+          }
+        }
+      }
+    },
+    "Privacy": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "隐私"
+          }
+        }
+      }
+    },
+    "Private by design": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "隐私优先"
+          }
+        }
+      }
+    },
+    "Processing %@…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在处理 %@…"
+          }
+        }
+      }
+    },
+    "Provider": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "服务商"
+          }
+        }
+      }
+    },
+    "Queued": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "排队中"
+          }
+        }
+      }
+    },
+    "Quick Record": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "快速录音"
+          }
+        }
+      }
+    },
+    "Recent": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "最近"
+          }
+        }
+      }
+    },
+    "Record from your wrist": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "抬腕即录"
+          }
+        }
+      }
+    },
+    "Record with Auday": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用 Auday 录音"
+          }
+        }
+      }
+    },
+    "Recording": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "录音中"
+          }
+        }
+      }
+    },
+    "Recording & Transcription": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "录音与转写"
+          }
+        }
+      }
+    },
+    "Recording at %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 的录音"
+          }
+        }
+      }
+    },
+    "Recording deleted": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "录音已删除"
+          }
+        }
+      }
+    },
+    "Recordings": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "录音"
+          }
+        }
+      }
+    },
+    "Recordings from your Watch and iPhone appear here.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "来自 Apple Watch 和 iPhone 的录音会显示在这里。"
+          }
+        }
+      }
+    },
+    "Recordings sync to your iPhone automatically, even later if it's out of range.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "录音会自动同步到 iPhone，即使暂时不在身边，之后也会同步。"
+          }
+        }
+      }
+    },
+    "Refresh": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "刷新"
+          }
+        }
+      }
+    },
+    "Refresh list": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "刷新列表"
+          }
+        }
+      }
+    },
+    "Search transcripts": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "搜索转写内容"
+          }
+        }
+      }
+    },
+    "Settings": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设置"
+          }
+        }
+      }
+    },
+    "Share audio": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "分享音频"
+          }
+        }
+      }
+    },
+    "Sleep": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "睡眠"
+          }
+        }
+      }
+    },
+    "Speech Recognition": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "语音识别"
+          }
+        }
+      }
+    },
+    "Speech is transcribed by Apple’s on-device recognizer. With “On-device only” enabled, audio is never sent anywhere.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "语音由 Apple 的设备端识别器转写。开启“仅限设备端”后，音频不会被发送到任何地方。"
+          }
+        }
+      }
+    },
+    "Speech recognition is unavailable for %@.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 暂不支持语音识别。"
+          }
+        }
+      }
+    },
+    "Speech recognition permission is required.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "需要语音识别权限。"
+          }
+        }
+      }
+    },
+    "Star": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "标星"
+          }
+        }
+      }
+    },
+    "Start an Auday recording with one tap.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一键开始 Auday 录音。"
+          }
+        }
+      }
+    },
+    "Stays on your devices": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "数据留在你的设备上"
+          }
+        }
+      }
+    },
+    "Steps": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "步数"
+          }
+        }
+      }
+    },
+    "Stress": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "压力"
+          }
+        }
+      }
+    },
+    "Summarize again": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重新总结"
+          }
+        }
+      }
+    },
+    "Summarize automatically": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自动总结"
+          }
+        }
+      }
+    },
+    "Summarize now": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "立即总结"
+          }
+        }
+      }
+    },
+    "Summarize yesterday's meetings": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "总结昨天的会议"
+          }
+        }
+      }
+    },
+    "Summarizing": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "总结中"
+          }
+        }
+      }
+    },
+    "Summary": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "摘要"
+          }
+        }
+      }
+    },
+    "System": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "跟随系统"
+          }
+        }
+      }
+    },
+    "Tag location": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "记录地点"
+          }
+        }
+      }
+    },
+    "Tap once on the Watch. Audio syncs to your iPhone.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在手表上轻点一下，音频会自动同步到 iPhone。"
+          }
+        }
+      }
+    },
+    "Tap to record": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "轻点录音"
+          }
+        }
+      }
+    },
+    "Temperature": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "温度 (Temperature)"
+          }
+        }
+      }
+    },
+    "Test connection": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "测试连接"
+          }
+        }
+      }
+    },
+    "The Base URL is not valid.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Base URL 无效。"
+          }
+        }
+      }
+    },
+    "The endpoint returned no models.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "接口没有返回任何模型。"
+          }
+        }
+      }
+    },
+    "The model returned an empty response.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "模型返回了空内容。"
+          }
+        }
+      }
+    },
+    "Theme": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "主题"
+          }
+        }
+      }
+    },
+    "Thinking…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "思考中…"
+          }
+        }
+      }
+    },
+    "Timeline": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "时间线"
+          }
+        }
+      }
+    },
+    "Today": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "今天"
+          }
+        }
+      }
+    },
+    "Today's recordings": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "今日录音"
+          }
+        }
+      }
+    },
+    "Transcribe again": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重新转写"
+          }
+        }
+      }
+    },
+    "Transcribing": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "转写中"
+          }
+        }
+      }
+    },
+    "Transcribing on device…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在设备端转写…"
+          }
+        }
+      }
+    },
+    "Transcript": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "转写"
+          }
+        }
+      }
+    },
+    "Transcription runs on-device. No Auday servers, ever.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "转写在设备端完成，永远没有 Auday 服务器。"
+          }
+        }
+      }
+    },
+    "Try again": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重试"
+          }
+        }
+      }
+    },
+    "Try another word.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "换个关键词试试。"
+          }
+        }
+      }
+    },
+    "Unstar": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "取消标星"
+          }
+        }
+      }
+    },
+    "Updated %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "更新于 %@"
+          }
+        }
+      }
+    },
+    "Version": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "版本"
+          }
+        }
+      }
+    },
+    "What did I talk about today?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "我今天聊了些什么？"
+          }
+        }
+      }
+    },
+    "What is sent to your model": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "哪些内容会发送给模型"
+          }
+        }
+      }
+    },
+    "What tasks did I agree to this week?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这周我答应了哪些事情？"
+          }
+        }
+      }
+    },
+    "When was I most stressed today?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "我今天什么时候压力最大？"
+          }
+        }
+      }
+    },
+    "When you summarize, reflect or chat, the relevant transcript text and short health/place context are sent directly from your iPhone to the endpoint you configured — never the audio.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "当你总结、回顾或对话时，相关的转写文本以及简短的健康/地点信息会直接从 iPhone 发送到你配置的接口——绝不发送音频。"
+          }
+        }
+      }
+    },
+    "Your API key is kept in the Keychain and only used to call your chosen provider. Their privacy policy applies to that text.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你的 API Key 保存在钥匙串中，只用于调用你选择的服务商。这些文本适用该服务商的隐私政策。"
+          }
+        }
+      }
+    },
+    "Your API key is stored in the iOS Keychain on this device only.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你的 API Key 只保存在本机的 iOS 钥匙串中。"
+          }
+        }
+      }
+    },
+    "Your day, remembered.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "记住你的每一天。"
+          }
+        }
+      }
+    },
+    "Your key, your provider": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你的 Key，你的服务商"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

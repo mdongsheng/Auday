@@ -1,0 +1,112 @@
+name: Auday
+
+options:
+  bundleIdPrefix: com.mdongsheng
+  developmentLanguage: en
+  createIntermediateGroups: true
+  deploymentTarget:
+    iOS: "18.0"
+    watchOS: "11.0"
+
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MARKETING_VERSION: "1.0.0"
+    CURRENT_PROJECT_VERSION: "1"
+    CODE_SIGN_STYLE: Automatic
+    DEVELOPMENT_TEAM: ""
+    LOCALIZATION_PREFERS_STRING_CATALOGS: YES
+    SWIFT_EMIT_LOC_STRINGS: YES
+    ENABLE_USER_SCRIPT_SANDBOXING: YES
+
+targets:
+  Auday:
+    type: application
+    platform: iOS
+    sources:
+      - path: iOS
+      - path: Shared
+    info:
+      path: Config/iOS-Info.plist
+      properties:
+        CFBundleDisplayName: Auday
+        CFBundleLocalizations: [en, zh-Hans]
+        LSRequiresIPhoneOS: true
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+        UIBackgroundModes: [audio, processing]
+        BGTaskSchedulerPermittedIdentifiers: [com.mdongsheng.auday.process]
+        NSMicrophoneUsageDescription: Auday records audio so you can transcribe and recall your conversations.
+        NSSpeechRecognitionUsageDescription: Auday transcribes your recordings on this device.
+        NSHealthShareUsageDescription: Auday reads heart rate, HRV, steps, energy and sleep to add context to your day.
+        NSHealthUpdateUsageDescription: Auday does not write health data.
+        NSLocationWhenInUseUsageDescription: Auday tags recordings with the place where they happened.
+        NSAppTransportSecurity:
+          NSAllowsLocalNetworking: true
+    entitlements:
+      path: Config/Auday.entitlements
+      properties:
+        com.apple.developer.healthkit: true
+        com.apple.developer.healthkit.access: []
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.mdongsheng.auday
+        TARGETED_DEVICE_FAMILY: "1"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+    dependencies:
+      - target: AudayWatch
+    scheme: {}
+
+  AudayWatch:
+    type: application
+    platform: watchOS
+    sources:
+      - path: Watch
+      - path: Shared
+    info:
+      path: Config/Watch-Info.plist
+      properties:
+        CFBundleDisplayName: Auday
+        CFBundleLocalizations: [en, zh-Hans]
+        WKApplication: true
+        WKCompanionAppBundleIdentifier: com.mdongsheng.auday
+        WKBackgroundModes: [workout-processing]
+        CFBundleURLTypes:
+          - CFBundleURLName: com.mdongsheng.auday
+            CFBundleURLSchemes: [auday]
+        NSMicrophoneUsageDescription: Auday records audio on your wrist and sends it to your iPhone for transcription.
+        NSHealthShareUsageDescription: Auday reads your heart rate while recording.
+        NSHealthUpdateUsageDescription: Auday uses a workout session to keep recording in the background. Workouts are not saved.
+    entitlements:
+      path: Config/AudayWatch.entitlements
+      properties:
+        com.apple.developer.healthkit: true
+        com.apple.developer.healthkit.access: []
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.mdongsheng.auday.watchkitapp
+        TARGETED_DEVICE_FAMILY: "4"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+    dependencies:
+      - target: AudayWidgets
+    scheme: {}
+
+  AudayWidgets:
+    type: app-extension
+    platform: watchOS
+    sources:
+      - path: Widgets
+      - path: Shared
+    info:
+      path: Config/Widgets-Info.plist
+      properties:
+        CFBundleDisplayName: Auday
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.mdongsheng.auday.watchkitapp.widgets
+        TARGETED_DEVICE_FAMILY: "4"
+        SKIP_INSTALL: YES
