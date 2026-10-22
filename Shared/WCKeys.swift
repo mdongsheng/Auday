@@ -13,10 +13,17 @@ enum WCKey {
     static let todayCount = "todayCount"
     static let todayDuration = "todayDuration"
     static let modelConfigured = "modelConfigured"
+    static let action = "action"
+    static let isRecording = "isRecording"
+    static let sessionStart = "sessionStart"
 }
 
 enum WCKind {
     static let recording = "recording"
     static let ask = "ask"
     static let answer = "answer"
+    /// iPhone → Watch: `action` is "start" or "stop".
+    static let command = "command"
+    /// Watch → iPhone: live recording state.
+    static let watchStatus = "watchStatus"
 }

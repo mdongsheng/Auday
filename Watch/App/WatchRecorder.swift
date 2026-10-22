@@ -30,6 +30,7 @@ final class WatchRecorder {
     private var sessionID = UUID()
     private var chunkTimer: Timer?
     private var meterTimer: Timer?
+    private var lastStatusSent = Date.distantPast
 
     private static let chunkSeconds: TimeInterval = 5 * 60
 
@@ -41,8 +42,13 @@ final class WatchRecorder {
 
     init() {
         workout.onHeartRate = { [weak self] bpm in
-            self?.heartRate = bpm
-            self?.chunkHeartRates.append(bpm)
+            guard let self else { return }
+            heartRate = bpm
+            chunkHeartRates.append(bpm)
+            if Date.now.timeIntervalSince(lastStatusSent) > 5 {
+                lastStatusSent = .now
+                WatchLink.shared.sendStatus()
+            }
         }
     }
 
@@ -72,6 +78,7 @@ final class WatchRecorder {
         sessionStart = .now
         isRecording = true
         startChunk()
+        WatchLink.shared.sendStatus()
 
         chunkTimer = Timer.scheduledTimer(withTimeInterval: Self.chunkSeconds, repeats: true) { [weak self] _ in
             Task { @MainActor in self?.rotateChunk() }
@@ -91,8 +98,10 @@ final class WatchRecorder {
         workout.stop()
         isRecording = false
         sessionStart = nil
+        heartRate = nil
         level = 0
         try? AVAudioSession.sharedInstance().setActive(false)
+        WatchLink.shared.sendStatus()
     }
 
     private func startChunk() {

@@ -39,6 +39,7 @@ struct TodayView: View {
                 VStack(alignment: .leading, spacing: 16) {
                     header
                     RecordCard()
+                    if WatchRemote.shared.isWatchAvailable { WatchRecordCard() }
                     reflectionCard
                     statsGrid
                     if !health.heartRateSeries.isEmpty { heartRateCard }
@@ -52,6 +53,7 @@ struct TodayView: View {
             .navigationDestination(for: Recording.self) { RecordingDetailView(recording: $0) }
             .refreshable { await loadHealth() }
             .task { await loadHealth() }
+            .onAppear { WatchRemote.shared.refreshAvailability() }
         }
     }
 

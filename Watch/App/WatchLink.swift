@@ -91,6 +91,25 @@ final class WatchLink: NSObject, WCSessionDelegate {
         }
     }
 
+    /// Reports the recording state to the iPhone. The application context keeps the latest
+    /// state for when the iPhone app opens later; a message updates it immediately when reachable.
+    @MainActor
+    func sendStatus() {
+        let session = WCSession.default
+        guard session.activationState == .activated else { return }
+        let recorder = WatchRecorder.shared
+        var payload: [String: Any] = [
+            WCKey.kind: WCKind.watchStatus,
+            WCKey.isRecording: recorder.isRecording,
+        ]
+        if let start = recorder.sessionStart { payload[WCKey.sessionStart] = start.timeIntervalSince1970 }
+        if let heartRate = recorder.heartRate { payload[WCKey.heartRate] = heartRate }
+        try? session.updateApplicationContext(payload)
+        if session.isReachable {
+            session.sendMessage(payload, replyHandler: nil, errorHandler: nil)
+        }
+    }
+
     @MainActor
     func refreshPending() {
         WatchState.shared.pendingTransfers = WCSession.default.outstandingFileTransfers.count
@@ -112,10 +131,18 @@ final class WatchLink: NSObject, WCSessionDelegate {
 
     func session(_ session: WCSession, didReceiveMessage message: [String: Any]) {
         handleAnswer(message)
+        handleCommand(message)
+    }
+
+    func session(_ session: WCSession, didReceiveMessage message: [String: Any], replyHandler: @escaping ([String: Any]) -> Void) {
+        replyHandler(["ack": true])
+        handleAnswer(message)
+        handleCommand(message)
     }
 
     func session(_ session: WCSession, didReceiveUserInfo userInfo: [String: Any] = [:]) {
         handleAnswer(userInfo)
+        handleCommand(userInfo)
     }
 
     func session(_ session: WCSession, didFinish fileTransfer: WCSessionFileTransfer, error: Error?) {
@@ -136,6 +163,20 @@ final class WatchLink: NSObject, WCSessionDelegate {
         if let count = context[WCKey.todayCount] as? Int { state.todayCount = count }
         if let duration = context[WCKey.todayDuration] as? Double { state.todayDuration = duration }
         if let configured = context[WCKey.modelConfigured] as? Bool { state.modelConfigured = configured }
+    }
+
+    private func handleCommand(_ message: [String: Any]) {
+        guard message[WCKey.kind] as? String == WCKind.command,
+              let action = message[WCKey.action] as? String else { return }
+        Task { @MainActor in
+            let recorder = WatchRecorder.shared
+            switch action {
+            case "start": await recorder.start()
+            case "stop": recorder.stop()
+            default: break
+            }
+            self.sendStatus()
+        }
     }
 
     private func handleAnswer(_ message: [String: Any]) {

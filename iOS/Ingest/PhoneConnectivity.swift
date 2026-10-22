@@ -30,7 +30,20 @@ final class PhoneConnectivity: NSObject, WCSessionDelegate {
     // MARK: WCSessionDelegate
 
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        Task { @MainActor in self.pushStatus() }
+        let context = session.receivedApplicationContext
+        Task { @MainActor in
+            self.pushStatus()
+            WatchRemote.shared.refreshAvailability()
+            WatchRemote.shared.apply(context)
+        }
+    }
+
+    func sessionWatchStateDidChange(_ session: WCSession) {
+        Task { @MainActor in WatchRemote.shared.refreshAvailability() }
+    }
+
+    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String: Any]) {
+        Task { @MainActor in WatchRemote.shared.apply(applicationContext) }
     }
 
     func sessionDidBecomeInactive(_ session: WCSession) {}
@@ -83,6 +96,10 @@ final class PhoneConnectivity: NSObject, WCSessionDelegate {
     // MARK: Ask from Watch
 
     private func handle(_ message: [String: Any]) {
+        if message[WCKey.kind] as? String == WCKind.watchStatus {
+            Task { @MainActor in WatchRemote.shared.apply(message) }
+            return
+        }
         guard message[WCKey.kind] as? String == WCKind.ask,
               let question = message[WCKey.question] as? String,
               let requestID = message[WCKey.requestID] as? String else { return }

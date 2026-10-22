@@ -63,6 +63,25 @@ final class HealthStore {
         }
     }
 
+    /// Launches the Auday Watch app in the background; it starts recording when it receives
+    /// the workout configuration. The Watch must be on the wrist and unlocked.
+    func startWatchApp() async throws {
+        let configuration = HKWorkoutConfiguration()
+        configuration.activityType = .mindAndBody
+        configuration.locationType = .unknown
+        try await withCheckedThrowingContinuation { (continuation: CheckedContinuation<Void, Error>) in
+            store.startWatchApp(with: configuration) { success, error in
+                if let error {
+                    continuation.resume(throwing: error)
+                } else if !success {
+                    continuation.resume(throwing: CocoaError(.featureUnsupported))
+                } else {
+                    continuation.resume()
+                }
+            }
+        }
+    }
+
     nonisolated static func stress(fromSDNN ms: Double) -> Double {
         // ~20 ms SDNN → 100 (high stress), ~100 ms → 0 (relaxed).
         min(100, max(0, (100 - ms) / 80 * 100))

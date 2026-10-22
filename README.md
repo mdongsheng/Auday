@@ -9,6 +9,7 @@
 | 模块 | 说明 |
 | --- | --- |
 | ⌚️ Watch 录音 | 大按钮一键录音（支持双指互点手势），按 5 分钟分段，通过 `WCSession.transferFile` 自动同步到 iPhone（不在身边时排队，之后补传）。录音期间用体能训练会话保持后台运行并读取实时心率，结束后丢弃该训练、不写入「健身」。 |
+| 📲 iPhone 遥控手表 | 在「今天」页点「在 Apple Watch 上录音」：手表 App 已打开时直接通过 WatchConnectivity 下发命令；未打开时用 `HKHealthStore.startWatchApp` 在后台唤醒手表 App 并开始录音。iPhone 上实时显示手表的录音时长和心率，可以随时停止。要求手表戴在手腕上并已解锁，且手表端已授予麦克风权限。 |
 | 📱 iPhone 录音 | 在「今天」页直接录音，支持后台录音和可配置的分段时长。 |
 | 📝 设备端转写 | `SFSpeechRecognizer`，默认 `requiresOnDeviceRecognition`，支持简体中文 / English，句级时间戳；点击句子即可跳转播放。 |
 | ❤️ 健康上下文 | HealthKit：心率（均值 / 区间 / 15 分钟曲线）、HRV → 压力估算、步数、活动能量、昨晚睡眠。每条录音标注平均心率和压力。 |

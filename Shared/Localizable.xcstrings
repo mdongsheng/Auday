@@ -631,6 +631,16 @@
         }
       }
     },
+    "Make sure your Watch is on your wrist and unlocked.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请确认手表已戴在手腕上并已解锁。"
+          }
+        }
+      }
+    },
     "Microphone": {
       "localizations": {
         "zh-Hans": {
@@ -901,6 +911,16 @@
         }
       }
     },
+    "Record on Apple Watch": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在 Apple Watch 上录音"
+          }
+        }
+      }
+    },
     "Record with Auday": {
       "localizations": {
         "zh-Hans": {
@@ -947,6 +967,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "录音已删除"
+          }
+        }
+      }
+    },
+    "Recording on Apple Watch": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Watch 录音中"
           }
         }
       }
@@ -1091,12 +1121,32 @@
         }
       }
     },
+    "Start": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "开始"
+          }
+        }
+      }
+    },
     "Start an Auday recording with one tap.": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "一键开始 Auday 录音。"
+          }
+        }
+      }
+    },
+    "Starting on Watch…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在手表上启动…"
           }
         }
       }
@@ -1117,6 +1167,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "步数"
+          }
+        }
+      }
+    },
+    "Stop": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "停止"
           }
         }
       }
@@ -1257,6 +1317,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Base URL 无效。"
+          }
+        }
+      }
+    },
+    "The Watch starts recording, even with its app closed.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "即使手表 App 没有打开，也会直接开始录音。"
           }
         }
       }

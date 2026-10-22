@@ -69,6 +69,83 @@ struct RecordCard: View {
     }
 }
 
+/// Starts and stops recording on the paired Apple Watch, mirroring its live state.
+struct WatchRecordCard: View {
+    private var remote: WatchRemote { .shared }
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            HStack(spacing: 14) {
+                GradientIcon(
+                    systemName: "applewatch",
+                    size: 44,
+                    gradient: remote.isRecording ? Theme.accentGradient : Theme.calmGradient
+                )
+
+                VStack(alignment: .leading, spacing: 2) {
+                    if remote.isRecording {
+                        Text("Recording on Apple Watch")
+                            .font(Theme.headline)
+                            .foregroundStyle(Theme.pink)
+                        HStack(spacing: 10) {
+                            if let start = remote.sessionStart {
+                                TimelineView(.periodic(from: .now, by: 1)) { context in
+                                    Text(Format.clock(context.date.timeIntervalSince(start)))
+                                        .font(.system(.subheadline, design: .monospaced).weight(.semibold))
+                                }
+                            }
+                            if let bpm = remote.heartRate {
+                                Label("\(Int(bpm))", systemImage: "heart.fill")
+                                    .font(.subheadline)
+                                    .foregroundStyle(Theme.pink)
+                            }
+                        }
+                    } else if remote.isBusy {
+                        Text("Starting on Watch…")
+                            .font(Theme.headline)
+                    } else {
+                        Text("Record on Apple Watch")
+                            .font(Theme.headline)
+                        Text("The Watch starts recording, even with its app closed.")
+                            .font(.footnote)
+                            .foregroundStyle(.secondary)
+                    }
+                }
+                Spacer(minLength: 0)
+
+                if remote.isBusy {
+                    ProgressView()
+                } else {
+                    Button {
+                        if remote.isRecording {
+                            remote.stop()
+                        } else {
+                            Task { await remote.start() }
+                        }
+                    } label: {
+                        Text(remote.isRecording ? LocalizedStringKey("Stop") : LocalizedStringKey("Start"))
+                            .font(.subheadline.weight(.semibold))
+                            .foregroundStyle(.white)
+                            .padding(.horizontal, 16)
+                            .padding(.vertical, 8)
+                            .background(Theme.accentGradient, in: Capsule())
+                    }
+                    .buttonStyle(.plain)
+                    .sensoryFeedback(.impact, trigger: remote.isRecording)
+                }
+            }
+
+            if let error = remote.lastError {
+                Text(error)
+                    .font(.footnote)
+                    .foregroundStyle(.orange)
+            }
+        }
+        .card(padding: 16)
+        .onAppear { remote.refreshAvailability() }
+    }
+}
+
 struct StatTile: View {
     let icon: String
     let title: LocalizedStringKey
